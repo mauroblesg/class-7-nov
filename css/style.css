@@ -1,5 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+
 }
 
+:root {
+
+    --defaultcolor: #55a2a6;
+    --defaultblack: #151515;
+    --lightblack: #333333;
+    --darkerblack: #111111;
+    --lightblack2 : #444444;
+    ---defaultgray: #ccc;
+    --darkergray: #b2b2b2
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body,
+nav; 
+main,
+footer,
+main > section,
+.features a,
+.about > blockquote,
+.about > section > article {
+
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: var(--darkerblack);
+}
+
+h1, h3 {
+    text-transform: capitalize;
+}
+
+h2 {
+
+    color: white;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: var(--defaultblack);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (min-width: 250px) {
+
+    /* NAVIGATION START  */
+
+    nav > ul {
+        display: none;
+    }
+
+    nav aside {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5vh;
+        padding-right: 5vh;
+        background-color: var(--darkerblack);
+        color: white;
+        align-items: center;
+    }
+
+    details {
+        position: absolute;
+        width: 95%;
+        padding-right: 5%;
+        text-align: right;
+    }
+    
+
+    details ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--darkerblack);
+    }
+
+    details li {
+       
+        display: flex;
+    }
+
+    details a {
+
+        color: white;
+        padding: 3%;
+        width: 100%;
+    }
+
+    summary {
+        font-size: 24px;
+    }
+
+    header {
+
+        background-image: url(/img/pic1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40vh;
+    }
+
+    header > article {
+        background-color: rgba(50, 50, 50, .4);
+        height: 100%;
+        width: 100%;
+    }
+
+    /* FEATURES START  */
+
+    .features {
+        row-gap: 2vh;
+    }
+
+    .features blockquote {
+        line-height: 1.5;
+        width: 100%;
+        color: white;
+        background-color:var(--defaultcolor);
+        padding: 4%;
+        padding-left: 20%;
+        padding-right: 20%;
+        text-align: center;
+    }
+
+    .features q,
+    .features cite {
+        width: 80%;
+    }
+
+    .features > article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+    .features a {
+        align-items: center;
+        row-gap: 2vh;
+    }
+
+    .features i {
+        color:var(--darkerblack);
+        font-size: 48px;
+    }
+
+    .features h3 {
+        width: 40%;
+        text-align: center;
+    }
+
+    .features p {
+        color: var(--darkergray);
+        font-weight: 500;
+    }
+
+}
